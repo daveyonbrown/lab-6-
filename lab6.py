@@ -10,7 +10,13 @@ def encode(orig_pass):
 
 
 def decode(password):
-    pass
+   result = ''
+
+
+   for numbers in password:
+       new_numbers = str((int(numbers) - 3) % 10)
+       result += new_numbers
+   return result
 
 def main():
     testing = True
